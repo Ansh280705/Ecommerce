@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { ShoppingBag, Heart, User, Search, Menu, X, ChevronDown, LogOut, LayoutDashboard, Package } from 'lucide-react';
+import { ShoppingBag, Heart, User, Search, Menu, X, ChevronDown, ChevronRight, LogOut, LayoutDashboard, Package } from 'lucide-react';
 import { useCartStore } from '@/store/cartStore';
 import { useAuthStore } from '@/store/authStore';
 import { useWishlistStore } from '@/store/wishlistStore';
