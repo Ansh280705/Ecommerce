@@ -14,12 +14,12 @@ const HERO_SLIDES = [
 ];
 
 const CATEGORIES = [
-  { name: "Women's Fashion", slug: 'women', subtitle: 'Modern Elegance', img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format' },
-  { name: "Men's Style", slug: 'men', subtitle: 'Classic & Sharp', img: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&auto=format' },
-  { name: 'Kids Wear', slug: 'kids', subtitle: 'Playful Trends', img: 'https://images.unsplash.com/photo-1518831959646-742c3a14ebf0?w=600&auto=format' },
-  { name: 'Ethnic Wear', slug: 'ethnic-wear', subtitle: 'Heritage Fusion', img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&auto=format' },
-  { name: 'Accessories', slug: 'accessories', subtitle: 'The Final Touch', img: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format' },
-  { name: 'Western Wear', slug: 'western-wear', subtitle: 'Urban Essentials', img: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&auto=format' },
+  { name: "Women's Fashion", slug: 'women', subtitle: 'Modern Elegance', img: '/cat-women.png' },
+  { name: "Men's Style", slug: 'men', subtitle: 'Classic & Sharp', img: '/cat-men.png' },
+  { name: 'Kids Wear', slug: 'kids', subtitle: 'Playful Trends', img: '/cat-kids.png' },
+  { name: 'Ethnic Wear', slug: 'ethnic-wear', subtitle: 'Heritage Fusion', img: '/cat-ethnic.png' },
+  { name: 'Accessories', slug: 'accessories', subtitle: 'The Final Touch', img: '/cat-accessories.png' },
+  { name: 'Western Wear', slug: 'western-wear', subtitle: 'Urban Essentials', img: 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=600&h=750' },
 ];
 
 const FEATURES = [

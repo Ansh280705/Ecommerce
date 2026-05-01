@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Search, Eye, ChevronDown, Package, User, Clock, ShoppingCart } from 'lucide-react';
+import { Search, Eye, ChevronDown, Package, User, Clock, ShoppingCart, X } from 'lucide-react';
 import { ordersAPI } from '@/lib/api';
 import toast from 'react-hot-toast';
 
