@@ -44,7 +44,7 @@ export default function Footer() {
           {[
             { title: 'Collections', links: [{ label: "Women", href: '/products?category=women' }, { label: "Men", href: '/products?category=men' }, { label: "Kids", href: '/products?category=kids' }, { label: "Ethnic", href: '/products?category=ethnic-wear' }, { label: "New", href: '/products?newArrival=true' }] },
             { title: 'Support', links: [{ label: "Order Status", href: '/dashboard/orders' }, { label: "Shipping", href: '/shipping' }, { label: "Returns", href: '/returns' }, { label: "Sizing", href: '/sizing' }, { label: "Contact", href: '/contact' }] },
-            { title: 'Company', links: [{ label: "Our Story", href: '/about' }, { label: "Sustainability", href: '/sustainability' }, { label: "Stores", href: '/stores' }, { label: "Careers", href: '/careers' }, { label: "Media", href: '/media' }] },
+            { title: 'Company', links: [{ label: "Our Story", href: '/about' }, { label: "Sustainability", href: '/sustainability' }, { label: "Stores", href: '/stores' }, { label: "Founder", href: '/founder' }] },
           ].map(({ title, links }) => (
             <div key={title} className="animate-fadeIn">
               <h4 style={{ fontWeight: 700, marginBottom: 24, color: 'white', fontSize: '1rem', letterSpacing: '1px', textTransform: 'uppercase' }}>{title}</h4>
