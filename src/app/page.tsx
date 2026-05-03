@@ -310,50 +310,71 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* The Minds Behind Savaria */}
-        <section id="about-us" style={{ padding: 'var(--s12) 0', background: 'white' }}>
+        {/* The Minds Behind Savaria: High Editorial Version */}
+        <section id="about-us" style={{ padding: 'var(--s14) 0', background: '#fff' }}>
           <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: 80 }}>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: 20 }}>The Minds Behind <span style={{ color: 'var(--gold)' }}>Savaria</span></h2>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: 600, margin: '0 auto' }}>
-                Meet the visionaries who brought Savaria Fashion to life from the heart of Ratlam.
+            <div style={{ textAlign: 'center', marginBottom: 100, position: 'relative' }}>
+              <span style={{ color: 'var(--gold)', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '6px', textTransform: 'uppercase', display: 'block', marginBottom: 24 }}>The Visionaries</span>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', marginBottom: 24, fontWeight: 300, fontFamily: "'Cormorant Garamond', serif" }}>
+                The Minds Behind <span style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Savaria</span>
+              </h2>
+              <div style={{ width: 60, height: 1, background: 'var(--gold)', margin: '0 auto 32px' }} />
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: 700, margin: '0 auto', lineHeight: 1.8, fontStyle: 'italic' }}>
+                Bridging the gap between timeless artisanry and contemporary elegance from our atelier in Central India.
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40 }} className="mobile-stack">
-              {/* Shubham Chouhan */}
-              <div style={{ position: 'relative', overflow: 'hidden' }} className="hover-lift">
-                <div style={{ aspectRatio: '4/5', overflow: 'hidden', borderRadius: 20 }}>
-                  <img src="/team/founder.jpg" alt="Shubham Chouhan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%)' }} />
-                  <div style={{ position: 'absolute', bottom: 32, left: 32 }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Shubham Chouhan</h3>
-                    <p style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>Founder</p>
-                  </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 64, alignItems: 'start' }} className="mobile-stack">
+              {/* Shubham Chouhan - Founder */}
+              <div className="founder-card" style={{ position: 'relative' }}>
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '4px', background: '#f9f9f9', transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)' }}>
+                  <img 
+                    src="/team/co-founder.jpg" 
+                    alt="Shubham Chouhan" 
+                    style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', filter: 'grayscale(20%)', transition: 'transform 1.2s ease' }} 
+                    className="portrait-img"
+                  />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)', opacity: 0.8 }} />
                 </div>
-                <div style={{ padding: '20px 0 0 8px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                   <div style={{ width: 14, height: 14, borderRadius: '50%', border: '1px solid var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', color: 'var(--gold)' }}>●</div>
-                   <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Ratlam, India</span>
+                <div style={{ marginTop: 32, textAlign: 'left' }}>
+                  <span style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 900, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 12, display: 'block' }}>Founder & Visionary</span>
+                  <h3 style={{ fontSize: '2.2rem', fontWeight: 400, fontFamily: "'Cormorant Garamond', serif", marginBottom: 8 }}>Shubham Chouhan</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                    <span style={{ width: 24, height: 1, background: 'var(--gold)' }} />
+                    <span style={{ textTransform: 'uppercase', letterSpacing: '1.5px' }}>Ratlam, India</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Piyush Rathore */}
-              <div style={{ position: 'relative', overflow: 'hidden' }} className="hover-lift">
-                <div style={{ aspectRatio: '4/5', overflow: 'hidden', borderRadius: 20 }}>
-                  <img src="/team/co-founder.jpg" alt="Piyush Rathore" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%)' }} />
-                  <div style={{ position: 'absolute', bottom: 32, left: 32 }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Piyush Rathore</h3>
-                    <p style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>Co-Founder</p>
-                  </div>
+              {/* Piyush Rathore - Co-Founder */}
+              <div className="founder-card" style={{ position: 'relative', marginTop: 'clamp(0px, 10vw, 100px)' }}>
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '4px', background: '#f9f9f9', transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)' }}>
+                  <img 
+                    src="/team/founder.jpg" 
+                    alt="Piyush Rathore" 
+                    style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', filter: 'grayscale(20%)', transition: 'transform 1.2s ease' }} 
+                    className="portrait-img"
+                  />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%)', opacity: 0.8 }} />
                 </div>
-                <div style={{ padding: '20px 0 0 8px', display: 'flex', alignItems: 'center', gap: 8 }}>
-                   <div style={{ width: 14, height: 14, borderRadius: '50%', border: '1px solid var(--gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '8px', color: 'var(--gold)' }}>●</div>
-                   <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Ratlam, India</span>
+                <div style={{ marginTop: 32, textAlign: 'left' }}>
+                  <span style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 900, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 12, display: 'block' }}>Co-Founder & Director</span>
+                  <h3 style={{ fontSize: '2.2rem', fontWeight: 400, fontFamily: "'Cormorant Garamond', serif", marginBottom: 8 }}>Piyush Rathore</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                    <span style={{ width: 24, height: 1, background: 'var(--gold)' }} />
+                    <span style={{ textTransform: 'uppercase', letterSpacing: '1.5px' }}>Ratlam, India</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <style jsx>{`
+            .founder-card:hover .portrait-img { transform: scale(1.08); filter: grayscale(0%); }
+            .founder-card:hover h3 { color: var(--gold); transition: color 0.4s ease; }
+            @media (max-width: 768px) {
+              .founder-card { margin-top: 0 !important; margin-bottom: 60px; }
+            }
+          `}</style>
         </section>
 
         {/* Founder's Note */}
