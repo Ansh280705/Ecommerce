@@ -179,7 +179,7 @@ export default function HomePage() {
                   <div 
                     key={p.id} 
                     style={{ 
-                      minWidth: '320px', 
+                      minWidth: '240px', 
                       flexShrink: 0,
                       animationDelay: `${i * 0.15}s`,
                       animationFillMode: 'both'
