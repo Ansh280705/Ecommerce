@@ -274,41 +274,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* The Founders: The Visionaries */}
-        <section style={{ padding: 'var(--s12) 0', background: 'var(--cream)' }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: 64 }}>
-              <span style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '4px', textTransform: 'uppercase', marginBottom: 12, display: 'block' }}>The Visionaries</span>
-              <h2 style={{ fontSize: '2.5rem' }}>The Founders</h2>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }} className="mobile-stack">
-              {/* Founder 1 */}
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ width: '100%', aspectRatio: '1/1', overflow: 'hidden', marginBottom: 32, borderRadius: '50%', maxWidth: 280, margin: '0 auto 32px', border: '1px solid var(--border)', padding: 8 }}>
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Founder" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
-                </div>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: 8 }}>Tanishk</h3>
-                <p style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Founder & Creative Director</p>
-                <p style={{ maxWidth: 420, margin: '0 auto', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.8 }}>
-                  Driven by a passion for preserving Indian heritage, Tanishk envisioned Savaria as a bridge between ancient craftsmanship and modern silhouettes.
-                </p>
-              </div>
-
-              {/* Founder 2 */}
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ width: '100%', aspectRatio: '1/1', overflow: 'hidden', marginBottom: 32, borderRadius: '50%', maxWidth: 280, margin: '0 auto 32px', border: '1px solid var(--border)', padding: 8 }}>
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" alt="Co-Founder" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
-                </div>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: 8 }}>Ansh</h3>
-                <p style={{ color: 'var(--gold)', fontSize: '0.65rem', fontWeight: 800, letterSpacing: '3px', textTransform: 'uppercase', marginBottom: 20 }}>Co-Founder & CEO</p>
-                <p style={{ maxWidth: 420, margin: '0 auto', color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.8 }}>
-                  With a focus on global excellence, Ansh leads the mission to bring India's finest artisanal treasures to the discerning global audience.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Real Client Experiences: Reviews */}
         <section style={{ padding: 'var(--s12) 0', background: 'var(--cream)', textAlign: 'center' }}>
