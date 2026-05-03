@@ -216,10 +216,13 @@ p { font-size: 0.95rem; line-height: 1.75; color: var(--text-secondary); letter-
 /* Product Card Grid */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--s3);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--s4);
 }
 
+@media (max-width: 1400px) {
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+}
 @media (max-width: 1024px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
 }
@@ -318,10 +321,11 @@ html, body {
   }
 }
 
-.products-layout, .cart-layout {
+.products-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 32px;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
 .cart-layout {

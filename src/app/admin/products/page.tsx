@@ -219,6 +219,21 @@ export default function AdminProductsPage() {
                 </div>
               </div>
 
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16 }}>
+                <div>
+                  <label style={{ fontWeight: 600, display: 'block', marginBottom: 6 }}>Brand</label>
+                  <input className="input-field" value={form.brand} onChange={e => setForm({...form, brand: e.target.value})} placeholder="e.g. Sawariya" />
+                </div>
+                <div>
+                  <label style={{ fontWeight: 600, display: 'block', marginBottom: 6 }}>Sizes (Comma separated)</label>
+                  <input className="input-field" value={form.sizes.join(', ')} onChange={e => setForm({...form, sizes: e.target.value.split(',').map(s => s.trim()).filter(Boolean)})} placeholder="e.g. S, M, L, XL" />
+                </div>
+                <div>
+                  <label style={{ fontWeight: 600, display: 'block', marginBottom: 6 }}>Colors (Comma separated)</label>
+                  <input className="input-field" value={form.colors.join(', ')} onChange={e => setForm({...form, colors: e.target.value.split(',').map(s => s.trim()).filter(Boolean)})} placeholder="e.g. Red, Blue, Black" />
+                </div>
+              </div>
+
               <div>
                 <label style={{ fontWeight: 600, display: 'block', marginBottom: 6 }}>Description</label>
                 <textarea className="input-field" rows={4} required value={form.description} onChange={e => setForm({...form, description: e.target.value})} />

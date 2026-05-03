@@ -131,15 +131,14 @@ export default function ProductDetailPage() {
 
               {/* Size */}
               {product.sizes?.length > 0 && (
-                <div style={{ marginBottom: 20 }}>
-                  <p style={{ fontWeight: 700, marginBottom: 10, display: 'flex', justifyContent: 'space-between' }}>
-                    Size: <span style={{ color: 'var(--gold)' }}>{selectedSize}</span>
+                <div style={{ marginBottom: 28 }}>
+                  <p style={{ fontWeight: 700, marginBottom: 12, fontSize: '0.9rem', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    Select Size: <span style={{ color: 'var(--gold)', marginLeft: 8 }}>{selectedSize}</span>
                   </p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                     {product.sizes.map((s: string) => (
-                      <button key={s} onClick={() => setSelectedSize(s)} style={{ padding: '8px 20px', borderRadius: 10, border: `2px solid ${selectedSize === s ? 'var(--gold)' : 'var(--border)'}`, background: selectedSize === s ? 'var(--gold)' : 'white', color: selectedSize === s ? 'var(--dark)' : 'inherit', fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem', transition: 'all 0.2s', position: 'relative' }}>
+                      <button key={s} onClick={() => setSelectedSize(s)} style={{ minWidth: 48, height: 48, borderRadius: 8, border: `2px solid ${selectedSize === s ? 'var(--gold)' : 'var(--border)'}`, background: selectedSize === s ? 'var(--gold)' : 'white', color: selectedSize === s ? 'var(--dark)' : 'var(--text-primary)', fontWeight: 700, cursor: 'pointer', fontSize: '0.9rem', transition: 'all 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         {s}
-                        {selectedSize === s && <Check size={12} style={{ position: 'absolute', top: -6, right: -6, background: 'var(--green)', color: 'white', borderRadius: '50%', padding: 1 }} />}
                       </button>
                     ))}
                   </div>
@@ -148,12 +147,38 @@ export default function ProductDetailPage() {
 
               {/* Color */}
               {product.colors?.length > 0 && (
-                <div style={{ marginBottom: 20 }}>
-                  <p style={{ fontWeight: 700, marginBottom: 10 }}>Color: <span style={{ color: 'var(--gold)' }}>{selectedColor}</span></p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                    {product.colors.map((c: string) => (
-                      <button key={c} onClick={() => setSelectedColor(c)} title={c} style={{ width: 32, height: 32, borderRadius: '50%', background: c.toLowerCase(), border: `3px solid ${selectedColor === c ? 'var(--gold)' : 'transparent'}`, cursor: 'pointer', outline: '1px solid rgba(0,0,0,0.15)', transition: 'all 0.2s' }} />
-                    ))}
+                <div style={{ marginBottom: 32 }}>
+                  <p style={{ fontWeight: 700, marginBottom: 12, fontSize: '0.9rem', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    Color: <span style={{ color: 'var(--gold)', marginLeft: 8 }}>{selectedColor}</span>
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+                    {product.colors.map((c: string) => {
+                      const isHex = c.startsWith('#');
+                      const displayColor = c.toLowerCase();
+                      return (
+                        <button 
+                          key={c} 
+                          onClick={() => setSelectedColor(c)} 
+                          title={c} 
+                          style={{ 
+                            width: 38, 
+                            height: 38, 
+                            borderRadius: '50%', 
+                            background: displayColor, 
+                            border: `2px solid ${selectedColor === c ? 'var(--gold)' : 'white'}`, 
+                            boxShadow: selectedColor === c ? '0 0 0 2px var(--gold)' : '0 0 0 1px var(--border)',
+                            cursor: 'pointer', 
+                            transition: 'all 0.2s',
+                            position: 'relative',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                          }}
+                        >
+                          {selectedColor === c && <Check size={14} color="white" style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.5))' }} />}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}
