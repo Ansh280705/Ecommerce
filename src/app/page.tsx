@@ -275,23 +275,23 @@ export default function HomePage() {
         </section>
 
         {/* The Minds Behind Savaria */}
-        <section style={{ padding: 'var(--s12) 0', background: 'white' }}>
+        <section id="about-us" style={{ padding: 'var(--s12) 0', background: 'white' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: 80 }}>
-              <h2 style={{ fontSize: '3rem', marginBottom: 20 }}>The Minds Behind <span style={{ color: 'var(--gold)' }}>Savaria</span></h2>
+              <h2 style={{ fontSize: '3.5rem', marginBottom: 20 }}>The Minds Behind <span style={{ color: 'var(--gold)' }}>Savaria</span></h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: 600, margin: '0 auto' }}>
                 Meet the visionaries who brought Savaria Fashion to life from the heart of Ratlam.
               </p>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40 }} className="mobile-stack">
-              {/* Piyush Rathore */}
+              {/* Shubham Chouhan */}
               <div style={{ position: 'relative', overflow: 'hidden' }} className="hover-lift">
                 <div style={{ aspectRatio: '4/5', overflow: 'hidden', borderRadius: 20 }}>
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Piyush Rathore" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/founders/shubham.png" alt="Shubham Chouhan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%)' }} />
                   <div style={{ position: 'absolute', bottom: 32, left: 32 }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Piyush Rathore</h3>
+                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Shubham Chouhan</h3>
                     <p style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>Founder</p>
                   </div>
                 </div>
@@ -301,13 +301,13 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Shubham Chouhan */}
+              {/* Piyush Rathore */}
               <div style={{ position: 'relative', overflow: 'hidden' }} className="hover-lift">
                 <div style={{ aspectRatio: '4/5', overflow: 'hidden', borderRadius: 20 }}>
-                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" alt="Shubham Chouhan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="/founders/piyush.png" alt="Piyush Rathore" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%)' }} />
                   <div style={{ position: 'absolute', bottom: 32, left: 32 }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Shubham Chouhan</h3>
+                    <h3 style={{ color: 'white', fontSize: '1.8rem', marginBottom: 4 }}>Piyush Rathore</h3>
                     <p style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase' }}>Co-Founder</p>
                   </div>
                 </div>
