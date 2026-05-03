@@ -65,17 +65,30 @@ export default function HomePage() {
   }, [nextSlide]);
 
   useEffect(() => {
-    Promise.all([
-      productsAPI.getAll({ featured: 'true', limit: 8 }),
-      productsAPI.getAll({ newArrival: 'true', limit: 8 }),
-      bannersAPI.getAll(),
-      reviewsAPI.getAll(),
-    ]).then(([feat, newArr, bannerRes, reviewRes]) => {
-      setProducts(feat.data.products || []);
-      setNewArrivals(newArr.data.products || []);
-      setBanners(bannerRes.data || []);
-      setReviews(reviewRes.data || []);
-    }).catch(() => {}).finally(() => setLoading(false));
+    const fetchData = async () => {
+      const startTime = Date.now();
+      try {
+        const [feat, newArr, bannerRes, reviewRes] = await Promise.all([
+          productsAPI.getAll({ featured: 'true', limit: 8 }),
+          productsAPI.getAll({ newArrival: 'true', limit: 8 }),
+          bannersAPI.getAll(),
+          reviewsAPI.getAll(),
+        ]);
+        
+        setProducts(feat.data.products || []);
+        setNewArrivals(newArr.data.products || []);
+        setBanners(bannerRes.data || []);
+        setReviews(reviewRes.data || []);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, 3000 - elapsedTime);
+        setTimeout(() => setLoading(false), remainingTime);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const slide = HERO_SLIDES[heroIdx];

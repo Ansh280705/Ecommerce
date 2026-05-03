@@ -34,12 +34,11 @@ export default function Loading() {
             ease: "easeInOut" 
           }}
           style={{ 
-            fontFamily: "'Cormorant Garamond', serif", 
-            fontSize: '1.2rem', 
+            fontSize: '1.4rem', 
             color: 'var(--gold)', 
-            letterSpacing: '8px', 
-            textTransform: 'uppercase',
-            fontWeight: 500
+            letterSpacing: '2px', 
+            fontWeight: 500,
+            marginTop: 8
           }}
         >
           नमस्ते
