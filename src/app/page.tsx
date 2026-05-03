@@ -145,10 +145,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Featured Selection */}
-        <section style={{ padding: 'var(--s10) 0', background: 'white' }}>
+        {/* Featured Selection: Horizontal Scroll with Reveal */}
+        <section style={{ padding: 'var(--s10) 0', background: 'white', overflow: 'hidden' }}>
           <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
               <div>
                 <span style={{ color: 'var(--gold)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '4px', textTransform: 'uppercase', marginBottom: 12, display: 'block' }}>The Edit</span>
                 <h2 style={{ marginBottom: 0 }}>Featured Selection</h2>
@@ -159,10 +159,36 @@ export default function HomePage() {
             </div>
 
             {loading ? (
-              <div className="products-grid">{[...Array(4)].map((_, i) => <div key={i} className="skeleton" style={{ height: 400 }} />)}</div>
+              <div style={{ display: 'flex', gap: 40, overflowX: 'hidden' }}>
+                {[...Array(4)].map((_, i) => <div key={i} className="skeleton" style={{ minWidth: 300, height: 400 }} />)}
+              </div>
             ) : (
-              <div className="products-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: 40 }}>
-                {products.map(p => <ProductCard key={p.id} product={p} />)}
+              <div 
+                className="horizontal-scroll-container"
+                style={{ 
+                  display: 'flex', 
+                  gap: 32, 
+                  overflowX: 'auto', 
+                  paddingBottom: 40,
+                  paddingRight: 'var(--container-padding)',
+                  msOverflowStyle: 'none',
+                  scrollbarWidth: 'none'
+                }}
+              >
+                {products.map((p, i) => (
+                  <div 
+                    key={p.id} 
+                    style={{ 
+                      minWidth: '320px', 
+                      flexShrink: 0,
+                      animationDelay: `${i * 0.15}s`,
+                      animationFillMode: 'both'
+                    }}
+                    className="animate-slideInLeft"
+                  >
+                    <ProductCard product={p} />
+                  </div>
+                ))}
               </div>
             )}
           </div>
