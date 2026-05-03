@@ -89,13 +89,12 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 1000,
-        background: scrolled ? 'rgba(255,255,255,0.92)' : 'white',
-        backdropFilter: scrolled ? 'blur(15px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(0,0,0,0.05)' : '1px solid var(--border)',
-        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-        boxShadow: scrolled ? '0 10px 30px rgba(0,0,0,0.05)' : 'none',
+        background: scrolled ? 'rgba(253,250,246,0.95)' : 'var(--cream)',
+        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        borderBottom: '1px solid var(--border)',
+        transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
       }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 64 : 85, transition: 'height 0.5s ease' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 70 : 90, transition: 'height 0.4s ease' }}>
 
           {/* Left: Hamburger (Mobile) */}
           <button 
@@ -108,29 +107,33 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="navbar-logo-link" style={{ textDecoration: 'none', zIndex: 10 }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 2, transition: 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)' }} 
-              onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05) rotate(-1deg)'} 
-              onMouseLeave={e => e.currentTarget.style.transform = 'scale(1) rotate(0deg)'}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', fontWeight: 700, color: 'var(--dark)', letterSpacing: '-0.5px' }}>Savaria</span>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', fontWeight: 400, color: 'var(--gold)', fontStyle: 'italic', marginLeft: '-2px' }}>Fashion</span>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 2, transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)' }} 
+              onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'} 
+              onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 700, color: 'var(--dark)', letterSpacing: '-0.03em' }}>Savaria</span>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 400, color: 'var(--gold)', fontStyle: 'italic', marginLeft: '2px' }}>Fashion</span>
             </div>
           </Link>
 
 
           {/* Center: Desktop Nav Links */}
-          <div style={{ display: 'flex', gap: 32, alignItems: 'center' }} className="hidden-mobile">
+          <div style={{ display: 'flex', gap: 40, alignItems: 'center' }} className="hidden-mobile">
             {categories.map((cat, i) => (
               <Link
                 key={cat.slug}
                 href={`/products?category=${cat.slug}`}
-                className="hover-glow"
                 style={{
                   textDecoration: 'none',
                   color: 'var(--text-primary)',
-                  fontWeight: 500,
-                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  fontSize: '0.8rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1.5px',
                   transition: 'all 0.3s ease',
+                  opacity: 0.8
                 }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '1'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '0.8'}
               >
                 {cat.name}
               </Link>
