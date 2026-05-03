@@ -84,7 +84,7 @@ export default function HomePage() {
               key={heroIdx}
               src={slide.img} 
               alt="" 
-              style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 1.5s' }} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', transition: 'opacity 1.5s' }} 
               className="animate-fadeIn"
             />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(10,10,11,0.9) 0%, rgba(10,10,11,0.4) 50%, transparent 100%)' }} />
