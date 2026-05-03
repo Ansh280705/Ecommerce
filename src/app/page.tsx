@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ProductCard from '@/components/products/ProductCard';
 import { productsAPI, categoriesAPI, bannersAPI, reviewsAPI } from '@/lib/api';
+import Loading from './loading';
 
 const HERO_SLIDES = [
   { 
@@ -78,6 +79,8 @@ export default function HomePage() {
   }, []);
 
   const slide = HERO_SLIDES[heroIdx];
+
+  if (loading) return <Loading />;
 
   return (
     <>
