@@ -200,8 +200,7 @@ export default function HomePage() {
                 <a key={i} href={store.map} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }} className="store-link">
                   <div style={{ padding: 'clamp(24px, 5vw, 48px)', background: '#f5f0e8', borderRadius: 24, textAlign: 'center', transition: 'all 0.4s ease', height: '100%', border: '1px solid transparent' }} className="hover-lift">
                     <h3 style={{ fontSize: '2.2rem', color: 'var(--gold)', marginBottom: 24, fontFamily: "'Cormorant Garamond', serif" }}>{store.name}</h3>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--dark)', marginBottom: 12, lineHeight: 1.6 }}>{store.addr}</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{store.phone}</p>
+                    <p style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>{store.phone}</p>
                     <div style={{ fontSize: '0.7rem', color: 'var(--gold)', fontWeight: 800, letterSpacing: '2px', marginTop: 24, textTransform: 'uppercase' }}>Directions →</div>
                   </div>
                 </a>

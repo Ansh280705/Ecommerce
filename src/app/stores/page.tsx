@@ -52,8 +52,7 @@ export default function StoresPage() {
               }}
             >
               <h2 className="font-serif" style={{ color: 'var(--gold)', marginBottom: 20, fontSize: '2.2rem' }}>{store.city}</h2>
-              <p style={{ fontWeight: 700, marginBottom: 12, fontSize: '1.1rem' }}>{store.address}</p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', letterSpacing: '1px' }}>{store.phone}</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', letterSpacing: '1px', marginBottom: 12 }}>{store.phone}</p>
               <div style={{ marginTop: 24, color: 'var(--gold)', fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px' }}>
                 View on Maps →
               </div>
