@@ -297,7 +297,7 @@ p { font-size: clamp(1.05rem, 2.2vw, 1.25rem); line-height: 1.7; }
 
 .products-layout, .cart-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: 32px;
 }
 

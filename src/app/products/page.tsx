@@ -142,11 +142,17 @@ function ProductsContent() {
                   )}
                 </>
               ) : (
-                <div style={{ textAlign: 'center', padding: '80px 0', color: 'var(--text-secondary)' }}>
-                  <div style={{ fontSize: '4rem', marginBottom: 16 }}>🔍</div>
-                  <h3 style={{ fontSize: '1.4rem', marginBottom: 8 }}>No products found</h3>
-                  <p>Try adjusting your filters or search terms</p>
-                  <button className="btn-gold" style={{ marginTop: 20 }} onClick={() => setFilters({ category: '', minPrice: '', maxPrice: '', sizes: [], sort: 'createdAt_desc', search: '', page: 1, featured: '', newArrival: '' })}>Clear Filters</button>
+                <div style={{ textAlign: 'center', padding: '120px 0', color: 'var(--text-secondary)', background: 'var(--beige)', borderRadius: 24, border: '2px dashed var(--border)' }}>
+                  <div style={{ fontSize: '5rem', marginBottom: 24, filter: 'drop-shadow(0 10px 15px rgba(0,0,0,0.1))' }}>🔍</div>
+                  <h3 className="font-serif" style={{ fontSize: '1.8rem', marginBottom: 12, color: 'var(--dark)' }}>No products found</h3>
+                  <p style={{ fontSize: '1.1rem', marginBottom: 32 }}>Try adjusting your filters or search terms to find what you're looking for.</p>
+                  <button 
+                    className="btn-gold" 
+                    style={{ padding: '14px 32px', fontSize: '0.9rem', fontWeight: 700, letterSpacing: '1px' }} 
+                    onClick={() => setFilters({ category: '', minPrice: '', maxPrice: '', sizes: [], sort: 'createdAt_desc', search: '', page: 1, featured: '', newArrival: '' })}
+                  >
+                    CLEAR FILTERS
+                  </button>
                 </div>
               )}
             </div>
